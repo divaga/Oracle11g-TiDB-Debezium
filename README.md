@@ -154,7 +154,7 @@ tar xvfz  debezium-connector-jdbc-2.5.0.Final-plugin.tar.gz
 
 #### Start JDBC Connector to TiDB
 
-> Register Sink
+> Register Sink, please change IP address of your TiDB server
 
 ```
 curl -vX POST http://localhost:8083/connectors -d @tidb-sink.json --header "Content-Type: application/json"
