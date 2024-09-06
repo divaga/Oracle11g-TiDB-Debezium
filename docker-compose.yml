@@ -22,11 +22,10 @@ services:
       KAFKA_ALLOW_EVERYONE_IF_NO_ACL_FOUND: 'true'
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
       KAFKA_LISTENERS: PLAINTEXT://:9092,SASL_PLAINTEXT://:9093
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://10.1.24.228:9092,SASL_PLAINTEXT://10.1.24.228:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://<your-local-ip-address>:9092,SASL_PLAINTEXT://<your-local-ip-address>:9093
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_DEFAULT_REPLICATION_FACTOR: 1
       KAFKA_OPTS: '-Djava.security.auth.login.config=/etc/kafka/kafka_server_jaas.conf'
-      #KAFKA_ADVERTISED_HOST_NAME: 10.1.24.228
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
