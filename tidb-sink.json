@@ -1,0 +1,18 @@
+{
+  "name": "tidb-sink",
+  "config": {
+    "connector.class": "io.debezium.connector.jdbc.JdbcSinkConnector",
+    "tasks.max": "1",
+    "connection.url": "jdbc:mysql://<tidb-server-address.:4000/test",
+    "connection.username": "dbz",
+    "connection.password": "dbz",
+    "hibernate.dialect": "org.hibernate.dialect.MySQL8Dialect",
+    "insert.mode": "upsert",
+    "delete.enabled": "true",
+    "auto.create": "true",
+    "primary.key.mode": "record_key",
+    "schema.evolution": "none",
+    "topics": "server1.DEBEZIUM.CUSTOMERS",
+    "table.name.format": "customers"
+  }
+}
