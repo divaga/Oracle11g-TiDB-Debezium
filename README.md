@@ -43,7 +43,7 @@ docker run -d --name dbz_oracle --shm-size=1g -p 1521:1521 -e ORACLE_PWD=top_sec
 
 ### Setup REDO logs
 
-Follow this [setup](https://github.com/debezium/oracle-vagrant-box/blob/master/REDOLOG_SETUP.md). To conclude, following steps are performed. Note that, I have used log multiplexing to increase recovery failure by keeping backup files.
+Follow this to change redo log size to 300M. You can use different size based on your need.
 
 ```shell
 select group#, bytes/1024/1024, status from v$log order by 1;
