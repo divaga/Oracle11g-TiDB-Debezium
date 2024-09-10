@@ -1,4 +1,4 @@
-```oracle
+``` sql
 
 select group#, bytes/1024/1024, status from v$log order by 1;
 
