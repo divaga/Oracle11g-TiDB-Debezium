@@ -128,7 +128,7 @@ curl -i -X POST -H "Accept:application/json" -H  "Content-Type:application/json"
 > To See the Status:
 
 ```
-curl  https://localhost:8083/connectors/tidb-sink/status -k   | jq
+curl  http://localhost:8083/connectors/inventory-connector/status -k   | jq
 
 ```
 
@@ -163,8 +163,16 @@ curl -vX POST http://localhost:8083/connectors -d @tidb-sink.json --header "Cont
 > To See the Status:
 
 ```
-curl  https://localhost:8083/connectors/tidb-sink/status -k   | jq
+curl  http://localhost:8083/connectors/tidb-sink/status -k   | jq
 
+```
+
+> To see all status:
+
+```
+curl -s "http://localhost:8083/connectors?expand=info&expand=status" | \
+jq '. | to_entries[] | [ .value.info.type, .key, .value.status.connector.state,.value.status.tasks[].state,.value.info.config."connector.class"]|join(":|:")' | \
+column -s : -t| sed 's/\"//g'| sort
 ```
 
 ### Verify the Changes (CDC)
