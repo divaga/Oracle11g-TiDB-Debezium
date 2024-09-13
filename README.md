@@ -125,10 +125,16 @@ Make sure you change `database.hostname` to HOSTNAME or IP of your oracle databa
 ```shell
 curl -i -X POST -H "Accept:application/json" -H  "Content-Type:application/json" http://localhost:8083/connectors/ -d @register-oracle-logminer.json
 ```
-> To See the Status:
+> To see the status:
 
 ```
 curl  http://localhost:8083/connectors/inventory-connector/status -k   | jq
+
+```
+> To delete connector (if needed):
+
+```
+curl -i -X DELETE localhost:8083/connectors/inventory-connector/
 
 ```
 
@@ -160,10 +166,17 @@ tar xvfz  debezium-connector-jdbc-2.5.0.Final-plugin.tar.gz
 curl -vX POST http://localhost:8083/connectors -d @tidb-sink.json --header "Content-Type: application/json"
 ```
 
-> To See the Status:
+> To see the status:
 
 ```
 curl  http://localhost:8083/connectors/tidb-sink/status -k   | jq
+
+```
+
+> To delete connector (if needed):
+
+```
+curl -i -X DELETE localhost:8083/connectors/tidb-sink/
 
 ```
 
