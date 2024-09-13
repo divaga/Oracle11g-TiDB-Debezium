@@ -11,7 +11,9 @@
     "delete.enabled": "true",
     "auto.create": "true",
     "primary.key.mode": "record_key",
-    "schema.evolution": "none",
+    "primary.key.fields": "ID",
+    "quote.identifiers": "true",
+    "schema.evolution": "basic",
     "topics": "server1.DEBEZIUM.CUSTOMERS",
     "table.name.format": "customers"
   }
