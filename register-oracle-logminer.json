@@ -13,6 +13,7 @@
     "database.out.server.name": "dbzout",
     "database.dbname" : "DBDEV11G",
     "database.connection.adapter" : "logminer",
+    "database.history.store.only.captured.tables.ddl": "true",
     "database.history.kafka.bootstrap.servers" : "kafka:9092",
     "database.history.kafka.topic": "schema-changes.inventory"
   }
