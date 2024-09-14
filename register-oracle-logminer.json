@@ -13,6 +13,8 @@
     "database.out.server.name": "dbzout",
     "database.dbname" : "DBDEV11G",
     "database.connection.adapter" : "logminer",
+    "log.mining.start.scn": "123456789",  
+    "snapshot.mode": "schema_only",
     "database.history.store.only.captured.tables.ddl": "true",
     "database.history.kafka.bootstrap.servers" : "kafka:9092",
     "database.history.kafka.topic": "schema-changes.inventory"
