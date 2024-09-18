@@ -156,7 +156,7 @@ tar xvfz  debezium-connector-jdbc-2.5.0.Final-plugin.tar.gz
 
 > Use Docker to Restart the connector Service
 
-`sudo docker restart <container-name>`
+`sudo docker restart connect`
 
 #### Start JDBC Connector to TiDB
 
