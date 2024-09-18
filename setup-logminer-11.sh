@@ -7,7 +7,7 @@ ORACLE_SID=XE
 export ORACLE_SID
 sqlplus /nolog <<- EOF
 	CONNECT sys/top_secret AS SYSDBA
-	alter system set db_recovery_file_dest_size = 10G;
+	alter system set db_recovery_file_dest_size = 50G;
 	alter system set db_recovery_file_dest = '/u01/app/oracle/oradata/recovery_area' scope=spfile;
 	shutdown immediate
 	startup mount
