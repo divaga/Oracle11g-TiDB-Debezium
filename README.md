@@ -7,7 +7,7 @@
 4. Run `docker-compose.yml`
 5. Deploy Debezium 1.3 Oracle Connector 
 6. Insert test data to database
-7. Record changes from NiFi
+
 
 Following pre-requisite is required before running the stack
 - Install [docker](https://docs.docker.com/engine/install/) and [docker-compose](https://docs.docker.com/compose/install/)
