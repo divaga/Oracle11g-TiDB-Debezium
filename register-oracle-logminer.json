@@ -15,6 +15,7 @@
     "database.connection.adapter" : "logminer",
     "log.mining.start.scn": "123456789",  
     "snapshot.mode": "initial",
+    "time.precision.mode":"connect",
     "database.history.store.only.captured.tables.ddl": "true",
     "database.history.kafka.bootstrap.servers" : "kafka:9092",
     "database.history.kafka.topic": "schema-changes.inventory"
