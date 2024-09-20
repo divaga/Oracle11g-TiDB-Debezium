@@ -13,7 +13,6 @@
     "database.out.server.name": "dbzout",
     "database.dbname" : "DBDEV11G",
     "database.connection.adapter" : "logminer",
-    "log.mining.start.scn": "123456789",  
     "snapshot.mode": "initial",
     "time.precision.mode":"connect",
     "database.history.store.only.captured.tables.ddl": "true",
