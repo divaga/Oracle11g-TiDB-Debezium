@@ -14,7 +14,7 @@
     "primary.key.fields": "ID",
     "quote.identifiers": "true",
     "schema.evolution": "basic",
-    "topics": "server1.DEBEZIUM.CUSTOMERS",
+    "topics": "sca.DEBEZIUM.CUSTOMERS",
     "table.name.format": "customers"
   }
 }
