@@ -3,11 +3,6 @@ FROM debezium/connect:$DEBEZIUM_VERSION
 ENV KAFKA_CONNECT_JDBC_DIR=$KAFKA_CONNECT_PLUGINS_DIR/kafka-connect-jdbc
 ENV INSTANT_CLIENT_DIR=/instant_client/
 
-USER root
-RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
-RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
-RUN yum -y install libaio && yum clean all
-
 USER kafka
 # Deploy Oracle client and drivers
 
