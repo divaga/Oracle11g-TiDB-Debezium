@@ -123,7 +123,7 @@ Verifying that all components and inter connectivity between them is working fin
 Make sure you change `database.hostname` to HOSTNAME or IP of your oracle database container
 
 ```shell
-curl -i -X POST -H "Accept:application/json" -H  "Content-Type:application/json" http://localhost:8083/connectors/ -d @register-oracle-logminer.json
+curl -i -X POST -H "Accept:application/json" -H  "Content-Type:application/json" http://localhost:8083/connectors/ -d @oracle-test.json
 ```
 > To see the status:
 
@@ -163,7 +163,7 @@ tar xvfz  debezium-connector-jdbc-2.5.0.Final-plugin.tar.gz
 > Register Sink, please change IP address of your TiDB server
 
 ```
-curl -vX POST http://localhost:8083/connectors -d @tidb-sink.json --header "Content-Type: application/json"
+curl -vX POST http://localhost:8083/connectors -d @tidb-test.json --header "Content-Type: application/json"
 ```
 
 > To see the status:
