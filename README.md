@@ -128,13 +128,13 @@ curl -i -X POST -H "Accept:application/json" -H  "Content-Type:application/json"
 > To see the status:
 
 ```
-curl  http://localhost:8083/connectors/inventory-connector/status -k   | jq
+curl  http://localhost:8083/connectors/oracle-test/status -k   | jq
 
 ```
 > To delete connector (if needed):
 
 ```
-curl -i -X DELETE localhost:8083/connectors/inventory-connector/
+curl -i -X DELETE localhost:8083/connectors/oracle-test/
 
 ```
 
@@ -169,14 +169,14 @@ curl -vX POST http://localhost:8083/connectors -d @tidb-sink.json --header "Cont
 > To see the status:
 
 ```
-curl  http://localhost:8083/connectors/tidb-sink/status -k   | jq
+curl  http://localhost:8083/connectors/tidb-test/status -k   | jq
 
 ```
 
 > To delete connector (if needed):
 
 ```
-curl -i -X DELETE localhost:8083/connectors/tidb-sink/
+curl -i -X DELETE localhost:8083/connectors/tidb-test/
 
 ```
 
